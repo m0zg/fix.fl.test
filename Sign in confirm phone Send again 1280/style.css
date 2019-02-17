@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:500,600,700&subset=cyrillic');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    background-color: #778899;
+    display: flex;
+    
+    height: 100vh;
+    width: 100vw;
+    
+    justify-content: center;
+    align-items: center;
+}
+
+.sms-confirm-phone-window {
+    width: 444px;
+    height: 277px;
+    border-radius: 10px;
+    box-shadow: 0 2px 60px 0 rgba(0, 0, 0, 0.5);
+    background-color: #f9fafc;
+    
+    padding: 30px 45px;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sms-confirm-form {
+    display: flex;
+    flex-direction: column;
+    
+    align-items: center;
+}
+
+.sms-confirm-header {
+    font-family: Montserrat, sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 28px;
+    text-align: center;
+    color: #1b2d3e;
+    
+    margin-bottom: 20px;
+}
+
+.no-code-recieved,
+.sms-confirm-code-label {
+    font-family: Montserrat, sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 17px;
+    text-align: center;
+    color: #566a83;
+    
+    margin-bottom: 20.5px;
+}
+
+.sms-confirm-phone-number {
+    color: #1b2d3e;
+}
+
+.sms-code-send-again,
+.change-phone-number {
+    text-decoration: none;
+    font-weight: 600;
+    color: #00b8ff;
+}
+
+.input-wrapper {
+    min-width: 220px;
+    min-height: 40px;
+    
+    display: flex;
+    justify-content: space-between;
+}
+
+.sms-confirm-input {
+    width: 40px;
+    height: 40px;
+    padding-left: 17px;
+    
+    border: 1px solid #d1dce7;
+    border-radius: 5px;
+}
+
+.sms-confirm-input::placeholder,
+.sms-confirm-input::-webkit-input-placeholder {
+    color: #bdccdc;
+}
+
+.no-code-recieved {
+    margin-top: 21px;
+}
+
+.sms-confirm-cancel {
+    font-family: Montserrat, sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 17px;
+    color: #566a83;
+    text-decoration: none;
+}

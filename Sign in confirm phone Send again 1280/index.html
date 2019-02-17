@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign in confirm phone Send again 1280</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="sms-confirm-phone-window">
+       
+        <form action="get" class="sms-confirm-form" name="smsConfirmForm">
+           
+            <div class="sms-confirm-header">Подтверждение телефона</div>
+            <label for="sms-confirm-code" class="sms-confirm-code-label">Введите код, отправленный на номер<br><span class="sms-confirm-phone-number">+7 (903) 003-77-77</span> <a href="#" class="change-phone-number">Изменить</a></label>
+            
+            <div class="input-wrapper">
+                <input type="number" class="sms-confirm-input" id="sms-confirm-code" maxlength="1" min="0" max="9" placeholder="-" required oninput="handleUserInput(this, document.smsConfirmForm.secondNumber)" name="firstNumber">
+                <input type="number" class="sms-confirm-input" id="sms-confirm-code" maxlength="1" min="0" max="9" placeholder="-" required oninput="handleUserInput(this, document.smsConfirmForm.thirdNumber, document.smsConfirmForm.firstNumber)" name="secondNumber">
+                <input type="number" class="sms-confirm-input" id="sms-confirm-code" maxlength="1" min="0" max="9" placeholder="-" required oninput="handleUserInput(this, document.smsConfirmForm.fourthNumber, document.smsConfirmForm.secondNumber)" name="thirdNumber">
+                <input type="number" class="sms-confirm-input" id="sms-confirm-code" maxlength="1" min="0" max="9" placeholder="-" required oninput="handleUserInput(this, false, document.smsConfirmForm.thirdNumber)" name="fourthNumber">
+            </div>
+            
+            <div class="no-code-recieved">Не приходит код? <a href="#" class="sms-code-send-again">Отправить снова</a></div>
+            <a href="" class="sms-confirm-cancel">Отменить</a>
+            
+        </form>
+        
+    </div>
+    
+    <script>
+        window.addEventListener("keydown", function(event) {
+            const key = Number(event.key)
+            const keyCodes = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
+            if (!window.wasKeyPressed && keyCodes.includes(key)) {
+                const firstInputField = document.smsConfirmForm.firstNumber
+                firstInputField.focus()
+                window.wasKeyPressed = true
+            }
+        })
+        
+        window.addEventListener("keyup", function(event) {
+            if (event.key === 'Backspace') {
+                if (document.activeElement.name !== 'firstNumber') {
+                    document.activeElement.previousElementSibling.focus()
+                }
+            }
+        })
+        function autoTab(current,to) {
+            if (current.getAttribute && current.value.length == current.getAttribute("maxlength")) {
+                to.focus();
+            }
+        }
+        function handleUserInput(that, nextElement, prevElement) {
+            console.warn({that, nextElement, prevElement})
+            if (nextElement) {
+                autoTab(that, nextElement);
+            }
+            if (that.value.length > that.maxLength) { 
+                that.value = that.value.slice(0, that.maxLength);
+            }
+        }
+    </script>
+    
+</body>
+</html>
