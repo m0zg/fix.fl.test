@@ -90,6 +90,8 @@ body {
     
     border: 1px solid #d1dce7;
     border-radius: 5px;
+    
+    -webkit-appearance: none;
 }
 
 .sms-confirm-input::placeholder,
