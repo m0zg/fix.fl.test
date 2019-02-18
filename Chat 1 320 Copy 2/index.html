@@ -20,10 +20,10 @@
                 <div class="sms-confirm-header">Подтверждение телефона</div>
                 <label for="sms-confirm-code" class="sms-confirm-code">Введите код, отправленный на номер<br><span class="sms-confirm-number">+7 (903) 003-77-77</span> <a href="#" class="change-number">Изменить</a></label>
                 <div class="input-wrapper">
-                    <input id="sms-confirm-code" class="sms-confirm-code-input" type="number" maxlength="1" placeholder="-" name="firstNumber" required max="9" min="0" oninput="handleUserInput(this, document.smsConfirmForm.secondNumber)">
-                    <input id="sms-confirm-code" class="sms-confirm-code-input" type="number" maxlength="1" placeholder="-" name="secondNumber" required max="9" min="0" oninput="handleUserInput(this, document.smsConfirmForm.thirdNumber, document.smsConfirmForm.firstNumber)">
-                    <input id="sms-confirm-code" class="sms-confirm-code-input" type="number" maxlength="1" placeholder="-" name="thirdNumber" required max="9" min="0" oninput="handleUserInput(this, document.smsConfirmForm.fourthNumber, document.smsConfirmForm.secondNumber)">
-                    <input id="sms-confirm-code" class="sms-confirm-code-input" type="number" maxlength="1" placeholder="-" name="fourthNumber" required max="9" min="0" oninput="handleUserInput(this, false, document.smsConfirmForm.thirdNumber)">
+                    <input id="sms-confirm-code" class="sms-confirm-code-input" type="number" pattern="\d*" maxlength="1" placeholder="-" name="firstNumber" required max="9" min="0" oninput="handleUserInput(this, document.smsConfirmForm.secondNumber)">
+                    <input id="sms-confirm-code" class="sms-confirm-code-input" type="number" pattern="\d*" maxlength="1" placeholder="-" name="secondNumber" required max="9" min="0" oninput="handleUserInput(this, document.smsConfirmForm.thirdNumber, document.smsConfirmForm.firstNumber)">
+                    <input id="sms-confirm-code" class="sms-confirm-code-input" type="number" pattern="\d*" maxlength="1" placeholder="-" name="thirdNumber" required max="9" min="0" oninput="handleUserInput(this, document.smsConfirmForm.fourthNumber, document.smsConfirmForm.secondNumber)">
+                    <input id="sms-confirm-code" class="sms-confirm-code-input" type="number" pattern="\d*" maxlength="1" placeholder="-" name="fourthNumber" required max="9" min="0" oninput="handleUserInput(this, false, document.smsConfirmForm.thirdNumber)">
                 </div>
                 
                 <div class="no-code-recieved">Не приходит код? Отправим снова через&nbsp;<span id="countdown">59</span>&nbsp;сек.</div>

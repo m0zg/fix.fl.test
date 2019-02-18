@@ -15,10 +15,10 @@
             <label for="sms-confirm-code" class="sms-confirm-code-label">Введите код, отправленный на номер<br><span class="sms-confirm-phone-number">+7 (903) 003-77-77</span> <a href="#" class="change-phone-number">Изменить</a></label>
             
             <div class="input-wrapper">
-                <input type="number" class="sms-confirm-input" id="sms-confirm-code" maxlength="1" min="0" max="9" placeholder="-" required oninput="handleUserInput(this, document.smsConfirmForm.secondNumber)" name="firstNumber">
-                <input type="number" class="sms-confirm-input" id="sms-confirm-code" maxlength="1" min="0" max="9" placeholder="-" required oninput="handleUserInput(this, document.smsConfirmForm.thirdNumber, document.smsConfirmForm.firstNumber)" name="secondNumber">
-                <input type="number" class="sms-confirm-input" id="sms-confirm-code" maxlength="1" min="0" max="9" placeholder="-" required oninput="handleUserInput(this, document.smsConfirmForm.fourthNumber, document.smsConfirmForm.secondNumber)" name="thirdNumber">
-                <input type="number" class="sms-confirm-input" id="sms-confirm-code" maxlength="1" min="0" max="9" placeholder="-" required oninput="handleUserInput(this, false, document.smsConfirmForm.thirdNumber)" name="fourthNumber">
+                <input type="number" pattern="\d*" class="sms-confirm-input" id="sms-confirm-code" maxlength="1" min="0" max="9" placeholder="-" required oninput="handleUserInput(this, document.smsConfirmForm.secondNumber)" name="firstNumber">
+                <input type="number" pattern="\d*" class="sms-confirm-input" id="sms-confirm-code" maxlength="1" min="0" max="9" placeholder="-" required oninput="handleUserInput(this, document.smsConfirmForm.thirdNumber, document.smsConfirmForm.firstNumber)" name="secondNumber">
+                <input type="number" pattern="\d*" class="sms-confirm-input" id="sms-confirm-code" maxlength="1" min="0" max="9" placeholder="-" required oninput="handleUserInput(this, document.smsConfirmForm.fourthNumber, document.smsConfirmForm.secondNumber)" name="thirdNumber">
+                <input type="number" pattern="\d*" class="sms-confirm-input" id="sms-confirm-code" maxlength="1" min="0" max="9" placeholder="-" required oninput="handleUserInput(this, false, document.smsConfirmForm.thirdNumber)" name="fourthNumber">
             </div>
             
             <div class="no-code-recieved">Не приходит код? <a href="#" class="sms-code-send-again">Отправить снова</a></div>
